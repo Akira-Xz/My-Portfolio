@@ -1,0 +1,74 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>Info Equipo</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/info-id"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col class="ion-no-padding" sizeMd="6" >
+        <ion-img [src]="equipos.imagen"></ion-img>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-card color="tertiary">
+          <ion-card-header>
+            <h1>Datos del Equipo</h1>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-list>
+              <ion-item>
+                <ion-label>Nombre</ion-label>
+                {{equipos.nombre}}
+              </ion-item>
+              <ion-item>
+                <ion-label>Modelo</ion-label>
+                {{equipos.modelo}}
+              </ion-item>
+              <ion-item>
+                <ion-label>Tipo</ion-label>
+                {{equipos.tipo}}
+              </ion-item>
+              <ion-item>
+                <ion-label>Procesador</ion-label>
+                {{equipos.procesador}}
+              </ion-item>
+              <ion-item>
+                <ion-label>RAM</ion-label>
+                {{equipos.ram}}
+              </ion-item>
+              <ion-item>
+                <ion-label>Almacenamiento</ion-label>
+                {{equipos.almacenamiento}}
+              </ion-item>
+              <ion-item>
+                <ion-label>Grafica</ion-label>
+                {{equipos.grafica}}
+              </ion-item>
+              <ion-item>
+                <ion-label>Tasa de Refresco</ion-label>
+                {{equipos.tasaRefresco}}
+              </ion-item>
+              <ion-item>
+                <ion-label>MotherBoard</ion-label>
+                {{equipos.motherboard}}
+              </ion-item>
+              <ion-item>
+                <ion-label>Imagen</ion-label>
+                <ion-avatar>
+                  <ion-img [src]="equipos.imagen"></ion-img>
+                </ion-avatar>
+              </ion-item>
+            </ion-list>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  
+</ion-content>

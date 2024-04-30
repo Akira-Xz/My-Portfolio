@@ -1,0 +1,38 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Informacion acerca de los equipos</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-list-header>
+      <ion-label>Contenido de la base de datos</ion-label>
+    </ion-list-header>
+    <ion-item *ngFor="let equipo of equipos">
+      <ion-avatar>
+        <ion-img [src]="equipo.imagen" ></ion-img>
+      </ion-avatar>
+      <ion-text>{{equipo.nombre}}</ion-text>
+      <ion-button [routerLink]="['/info-id',equipo.id]" slot="end">
+        <ion-icon name="information-circle-outline"></ion-icon>
+      </ion-button>
+      <ion-button slot="end" (click)="eliminarEquipo(equipo.id)">
+        <ion-icon name="trash" color="danger"></ion-icon>
+      </ion-button>
+      <ion-button [routerLink]="['/update/',equipo.id]" slot="end">
+        <ion-icon name="create"></ion-icon>
+      </ion-button>
+    </ion-item>
+    
+  </ion-list>
+  
+   <ion-fab vertical="bottom" horizontal="center" slot="fixed">
+    <ion-fab-button color="success" (click)="agregarEquipo()">
+      <ion-icon name="add" ></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

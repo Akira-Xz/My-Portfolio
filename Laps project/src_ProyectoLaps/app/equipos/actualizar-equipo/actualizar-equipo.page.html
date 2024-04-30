@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>agregarEquipo</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-row>
+    <ion-col>
+      <ion-card>
+        <ion-card-content>
+          <ion-input placeholder="Agregar nombre" [(ngModel)]="nombre"></ion-input>
+          <ion-input placeholder="Agregar modelo" [(ngModel)]="modelo"></ion-input>
+          <ion-input placeholder="Agregar tipo" [(ngModel)]="tipo"></ion-input>
+          <ion-input placeholder="Agregar procesador" [(ngModel)]="procesador"></ion-input>
+          <ion-input placeholder="Agregar ram" [(ngModel)]="ram"></ion-input>
+          <ion-input placeholder="Agregar almacenamiento" [(ngModel)]="almacenamiento"></ion-input>
+          <ion-input placeholder="Agregar grafica" [(ngModel)]="grafica"></ion-input>
+          <ion-input placeholder="Agregar tasa de refresco" [(ngModel)]="tasaRefresco"></ion-input>
+          <ion-input placeholder="Agregar motherboard" [(ngModel)]="motherboard"></ion-input>
+          <ion-input placeholder="Agregar imagen" [(ngModel)]="imagen"></ion-input>
+          <!-- Botones de Acción -->
+          <ion-button expand="block" color="success" (click)="updateLap()"> Agregar </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+</ion-content>

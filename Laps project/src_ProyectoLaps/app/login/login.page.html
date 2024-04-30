@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-grid class="ion-align-items-center">
+    <ion-row style="justify-content: center;" >
+      <ion-col sizeMd="6" >
+        
+        <ion-card color="tertiary">
+          <ion-card-header class="ion-text-center">
+            <h1>Datos del usuario</h1>
+          </ion-card-header>
+          <ion-card-content>
+            <form id="myLogin">
+            <ion-input placeholder="Agregar Nombre de Usuario" type="text" name="user"></ion-input>
+            <ion-input placeholder="Agregar Contraseña" type="password" name="pass"></ion-input>
+            
+            <ion-button expand="block" color="success" type="submit" (click)="login()">Iniciar Sesion</ion-button>
+          </form>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  
+</ion-content>
